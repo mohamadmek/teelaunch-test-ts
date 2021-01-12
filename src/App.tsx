@@ -30,7 +30,9 @@ const App = () => {
       ctx.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
       ctx.fillStyle = "black";
       ctx.drawImage(imageState, 10, 10, 400, 277);
-      ctx.fillText(text, 150, 50, 200);
+      ctx.font = "22px Comic Sans MS";
+      ctx.fillText(text, 250, 20, 400);
+      ctx.fillText("Hello World", 256, 256);
     }
   }, [imageState, canvasRef, text]);
 
