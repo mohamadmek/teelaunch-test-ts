@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 interface stateInterface {
+  imageSlice?: any;
   image: string;
 }
 
@@ -20,6 +21,6 @@ export const imageSlice = createSlice({
 
 export const { setImageRed } = imageSlice.actions;
 
-export const selectImage = (state: any) => state.image.image;
+export const selectImage = (state: stateInterface) => state.imageSlice.image;
 
 export default imageSlice.reducer;
